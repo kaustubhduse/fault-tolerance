@@ -147,6 +147,22 @@ Open **http://localhost:3000** to access the testing dashboard.
 - **Frontend:** Vanilla JavaScript + Express static serving
 - **Failure Handling:** Separate failed events queue for observability
 
+---
+
+## 🚀 Deployment
+
+### Vercel Deployment
+
+This app is deployed on Vercel. **Important notes:**
+
+- The database uses `/tmp` directory in production (Vercel's only writable location)
+- **Data resets on cold starts** - This is expected behavior for serverless environments
+- All 7 test scenarios work correctly, data just doesn't persist between deployments
+- For persistent storage, consider migrating to Vercel KV, MongoDB, or PostgreSQL
+
+**Local Development:**
+- Uses `db.json` in the project root (persistent)
+- Data survives restarts during local development
 
 ---
 
