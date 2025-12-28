@@ -12,15 +12,19 @@
     ],
     "routes": [
         {
-            "src": "/ingest/(.*)",
+            "src": "/ingest",
             "dest": "server.js"
         },
         {
-            "src": "/events/(.*)",
+            "src": "/events/processed",
             "dest": "server.js"
         },
         {
-            "src": "/aggregates/(.*)",
+            "src": "/events/failed",
+            "dest": "server.js"
+        },
+        {
+            "src": "/aggregates",
             "dest": "server.js"
         },
         {
